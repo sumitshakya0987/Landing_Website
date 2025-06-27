@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signup } from '../api/auth'; // centralized API call
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
@@ -78,7 +79,7 @@ const Signup = () => {
           <button type="submit" className="btn btn-primary w-100">Sign Up</button>
         </form>
         <p className="text-center mt-3">
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <Link to="/signup">Sign Up</Link>
         </p>
       </div>
     </div>
