@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { signup } from '../api/auth'; // centralized API call
 
 const Signup = () => {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
@@ -13,13 +14,8 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      if (res.ok) {
+      const data = await signup(form);
+      if (data.token) {
         localStorage.setItem('token', data.token);
         alert('Signup successful!');
         navigate('/');
@@ -34,8 +30,8 @@ const Signup = () => {
 
   return (
     <div
-     className="d-flex align-items-center justify-content-center vh-100"
-       style={{
+      className="d-flex align-items-center justify-content-center vh-100"
+      style={{
         background: 'linear-gradient(135deg, #1d2b64, #f8cdda)',
       }}
     >
