@@ -1,19 +1,19 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE = 'https://landing-website-4oi4.onrender.com';
 
 export const login = async (credentials) => {
-  const res = await fetch(`${BASE_URL}/auth/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+  const res = await fetch(`${API_BASE}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(credentials),
   });
   return res.json();
 };
 
-export const signup = async (formData) => {
-  const res = await fetch(`${BASE_URL}/auth/signup`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
+export const signup = async (data) => {
+  const res = await fetch(`${API_BASE}/auth/signup`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
   });
   return res.json();
 };
