@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/animations.css';
-import './Services.css'; // Import custom styles
+import './services.css'; // Import custom styles
 
 const services = [
   {
