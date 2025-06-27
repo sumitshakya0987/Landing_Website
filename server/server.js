@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://landing-website-1.onrender.com',
+  origin: 'https://landing-website-oe2m.vercel.app/',
   credentials: true
 }));
 app.use(express.json());
