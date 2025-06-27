@@ -1,0 +1,95 @@
+/* App.css */
+.bg-gradient {
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* App.css */
+
+.hero-section {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Deep blue gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-section .btn {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero-section .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* App.css */
+
+.about-section {
+  background: linear-gradient(135deg, #2C3E50, #4CA1AF); /* Elegant dark-to-teal gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.underline {
+  height: 4px;
+  width: 60px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+/* App.css */
+
+/* App.css */
+
+.services-section {
+  background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.service-card {
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+  background: #f1f1f1;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
